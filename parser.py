@@ -23,7 +23,7 @@ def main():
     
     mod_Table = pd.concat(tables)
     mod_Table.drop_duplicates(subset=['latitude', 'longitude'])    #Называем файл по дате
-    file_name="Day_"+datetime.datetime.today().strftime("%Y-%m-%d")+".csv"
+    file_name="Day_"+datetime.datetime.today().strftime("%Y-%m-%d %H")+".csv"
     # df = pd.read_csv('.csv', usecols=['model', 'price'])
     mod_Table.to_csv(file_name,index = False)
 
